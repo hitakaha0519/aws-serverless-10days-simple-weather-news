@@ -3,8 +3,7 @@ import boto3
 
 dynamodb_client = boto3.client('dynamodb')
 
-def lambda_handler(event, context):
-    print("deployed by CodeBuild.")
+def lambda_handler(event, context):    
     response = dynamodb_client.scan(
         TableName='simple-weather-news-table',
     )
